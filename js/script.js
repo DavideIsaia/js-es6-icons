@@ -122,6 +122,8 @@ const icons = [
 	}
 ];
 
+
+// aggiungo tutto questo in una function?
 icons.forEach((element)=> {
 let icon = `          
   <div class="box">
@@ -133,21 +135,23 @@ let icon = `
 $('.container').innerHTML += icon;
 })
 
-// let typeOfIcon = $('#type-of-icon');
+// porto tutto questo in cima
+let typeOfIcon = $('#type-of-icon');
 
-// typeOfIcon.addEventListener("change", () => {
-// 	// ripulisco il container
-//     $('.container').innerHTML = "";
-//  // se è selezionato qualcosa di diverso da all  
-//     const typeSelected = typeOfIcon.value;
-//     if ( typeSelected !== "all") {
-//         icons.filter((icon) =>  {
-//             return typeSelected === icons.type;
-//         });
-//         icons.filter((icon).forEach(qualcosa);
-//     }
-//     else {
-//         icons.forEach(qualcosaltro);
-//     }
-// }
-// );
+typeOfIcon.addEventListener("change", () => {
+
+	// ripulisco il container
+    $('.container').innerHTML = "";
+
+    // se è selezionato qualcosa di diverso da "all"  
+    const typeSelected = typeOfIcon.value;
+    // if ( typeSelected !== "all") {
+    //     icons.filter(() =>  {
+    //         return typeSelected === icons.type;
+    //     });
+    //     icons.filter((icon).forEach(qualcosa);
+    // } else {
+    //     icons.forEach(qualcosaltro);
+    // }
+}
+);
