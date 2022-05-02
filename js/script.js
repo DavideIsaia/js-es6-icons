@@ -4,6 +4,7 @@
 // Ciascuna icona ha una proprietà "color": utilizzare questa proprietà per visualizzare le icone del colore corrispondente.
 // BONUS
 // Aggiungere alla pagina una select in cui le options corrispondono ai vari tipi di icone (animal, vegetable, user). Quando l'utente seleziona un tipo dalla select, visualizzare solamente le icone corrispondenti.
+
 let $ = document.querySelector.bind(document);
 
 const icons = [
@@ -130,4 +131,5 @@ let icon = `
 `;
 // stampo in html il container con tutte le icone aggiunte
 $('.container').innerHTML += icon;
+$('i').style.color += `${element.color}`;
 })
