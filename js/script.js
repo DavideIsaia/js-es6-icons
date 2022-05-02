@@ -122,36 +122,31 @@ const icons = [
 	}
 ];
 
+// genero visualizzando il tutto all'avvio di default
+generateBox(icons);
 
-// aggiungo tutto questo in una function?
-icons.forEach((element)=> {
-let icon = `          
-  <div class="box">
-    <i class="${element.family} ${element.prefix}${element.name}" style="color: ${element.color}"></i>
-    <h5>${element.name}</h5>
-  </div>
-`;
-// stampo in html il container con tutte le icone aggiunte
-$('.container').innerHTML += icon;
-})
-
-// porto tutto questo in cima
 let typeOfIcon = $('#type-of-icon');
 
 typeOfIcon.addEventListener("change", () => {
 
 	// ripulisco il container
     $('.container').innerHTML = "";
-
-    // se è selezionato qualcosa di diverso da "all"  
     const typeSelected = typeOfIcon.value;
-    // if ( typeSelected !== "all") {
-    //     icons.filter(() =>  {
-    //         return typeSelected === icons.type;
-    //     });
-    //     icons.filter((icon).forEach(qualcosa);
-    // } else {
-    //     icons.forEach(qualcosaltro);
-    // }
+	let filteredArray = icons.filter((element) => typeSelected === 'all' || typeSelected === element.type);
+	console.log(typeSelected);
+	console.log(filteredArray);
+	generateBox(filteredArray);
+});
+
+function generateBox(array) {
+	icons.forEach((element)=> {
+		let icon = `          
+		  <div class="box">
+			<i class="${element.family} ${element.prefix}${element.name}" style="color: ${element.color}"></i>
+			<h5>${element.name}</h5>
+		  </div>
+		`;
+		// stampo in html il container con tutte le icone aggiunte
+		$('.container').innerHTML += icon;
+	})	
 }
-);
