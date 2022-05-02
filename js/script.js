@@ -126,7 +126,7 @@ icons.forEach((element)=> {
 let icon = `          
   <div class="box">
     <i class="${element.family} ${element.prefix}${element.name}" style="color: ${element.color}"></i>
-    <h4>${element.name}</h4>
+    <h5>${element.name}</h5>
   </div>
 `;
 // stampo in html il container con tutte le icone aggiunte
