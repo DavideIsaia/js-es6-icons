@@ -139,7 +139,7 @@ typeOfIcon.addEventListener("change", () => {
 });
 
 function generateBox(array) {
-	icons.forEach((element)=> {
+	array.forEach((element)=> {
 		let icon = `          
 		  <div class="box">
 			<i class="${element.family} ${element.prefix}${element.name}" style="color: ${element.color}"></i>
